@@ -1,0 +1,12 @@
+{% if article %}
+    <p> Title: {{ article.title }} </p>
+    <br>
+    <p> Main Body:  
+    <br>
+    {{ article.main_body }} 
+    </p>
+    <br>
+    <p> Date Published: {{ article.published_date }} </p>
+    
+    <li><a href="/article/"> back to main </a></li>
+{% endif %}

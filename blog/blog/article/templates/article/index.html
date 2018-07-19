@@ -1,0 +1,25 @@
+{% if article_list %}
+    <p> Welcome to the Official Blog for Real Estate Information! </p>
+    <p> Here is a list of articles for your viewing pleasure: </p>
+    <ul>
+    {% for article in article_list %}
+        <li><a href="/article/{{ article.id }}/">{{ article.title }}</a></li>
+    {% endfor %}
+    </ul>
+
+
+    <br>
+    <br>
+    <br>
+
+    <p> If you are an administrator of this blog and you wish to post or modify articles, please click on the link below:
+<ul>
+    <li><a href="/admin/">Administrative website</a></li>
+</ul>
+{% else %}
+    <p>Article not found!</p>
+
+{% endif %}
+
+    
+
