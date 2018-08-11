@@ -1,0 +1,22 @@
+{% if article %}
+    <p> <b>Title:</b> {{ article.title }} </p>
+    <br>
+    <p> <b>Main Body:</b>  
+    <br>
+    {{ article.main_body }} 
+    </p>
+    <br>
+    <p> <b>Date Published:</b> {{ article.published_date }} </p>
+
+    <br>
+    <p> <b>All comments:</b> </p>
+    <ul>
+    {% for comment in comment_list %}
+    <p> {{ comment.author }} said: </p>
+    <p> {{ comment.text }} </p>
+    <br>
+    {% endfor %}
+    </ul>
+    
+    <li><a href="/article/"> back to main </a></li>
+{% endif %}
